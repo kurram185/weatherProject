@@ -1,0 +1,145 @@
+:root {
+    --primary-color: #1e272e;
+    --accent-color: silver;
+
+    --text-color: #263238;
+    --body-color: #80deea;
+    --main-font: 'roboto';
+    --font-bold: 700;
+    --font-regular: 400;
+}
+* { box-sizing: border-box }
+
+body {
+    color: var(--text-color);
+    background-color: #1e272e;
+    font-family: var(--main-font), Arial;
+    font-weight: var(--font-regular);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+    height: 25vh;
+}
+h1 { font-weight: var(--font-bold) }
+input,
+button {
+    border: none;
+    background: none;
+    outline: 0;
+}
+button {cursor: pointer}
+.SearchBox-input::placeholder {/* No es un seudoelemento estandar */
+    color:white;
+    opacity: .6;
+}
+/* Chrome, Opera ySafari */
+.SearchBox-input::-webkit-input-placeholder {
+    color: white;
+}
+/* Firefox 19+ */
+.SearchBox-input::-moz-placeholder {
+    color: white;
+}
+/* IE 10+ y Edge */
+.SearchBox-input:-ms-input-placeholder {
+    color: white;
+}
+/* Firefox 18- */
+#formGroupExampleInput:-moz-placeholder {
+    color: white;
+}
+
+
+
+.SearchBox {
+    --height: 4em;
+    display: flex;
+
+    border-radius: var(--height);
+    background-color: var(--primary-color);
+    height: var(--height);
+}
+.SearchBox:hover .SearchBox-input {
+    padding-left: 2em;
+    padding-right: 1em;
+    width: 240px;
+}
+.SearchBox-input {
+    width: 0;
+    font-size: 1.2em;
+    color: #fff;
+    transition: .45s;
+}
+.SearchBox-button {
+    display: flex;
+    border-radius: 50%;
+    width: var(--height);
+    height: var(--height);
+    background-color: var(--accent-color);
+    transition: .3s;
+}
+.SearchBox-button:active  {
+    transform: scale(.85);
+}
+.SearchBox-icon {
+    margin: auto;
+    color: #fff;
+}
+
+
+@media screen and (min-width: 450px){
+    .SearchBox:hover .SearchBox-input {
+        width: 500px;
+    }
+}
+/*Search Bar End*/
+p#day{display: inline}
+
+.tempInfo{
+    background-color: #3d3d3d;
+    margin: 0 335px 0 350px;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.main_layer{
+    background-color: #1e272e;
+    color: silver;
+    padding:25px 50px 10px 70px;
+    margin: 0 335px 0 350px;
+    border-radius: 0 0 1rem 1rem;
+}
+
+@media (max-width: 950px) {
+    .main_layer{
+        height: auto;
+        margin: 0 0 2rem ;
+    }
+    .tempInfo{
+        height: auto;
+        margin: 0 0;
+    }
+
+}
+
+.temp{
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+}
+
+.middle_layer .fa{
+    font-size: 3rem;
+}
+
+.top_layer{
+    font-size: 1.3rem;
+}
+
+.data_hide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+

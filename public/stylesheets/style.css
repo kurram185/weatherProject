@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IM Fell DW Pica', serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+:root{
+  --main--bg: #1e272e;
+  --main-color: #0097e6;
+}
+.fa-sun{
+  transition: all linear;
+  animation: rot 2s linear infinite;
+  
+}
+@keyframes rot {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.header_left{
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.header_left .text_stl{
+  font-size: 5rem;
+  font-family: "Britannic Bold", fantasy;
+  color: blue;
+}
+.header_left .text_stll{
+  font-size: 3rem;
+  font-family: "Britannic Bold", fantasy;
+  color: green;
+}
+.header_left .text_stly{
+  font-size: 3rem;
+  font-family: "Britannic Bold", fantasy;
+  color: lightseagreen;
+}
+
+.header_left .weather_btn{
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px #000;
+  outline: none;
+}
+
+.header_right{
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.header_right figure img{
+  filter: drop-shadow(3rem 0.5rem 1rem rgb(0, 0, 0, 0.3));
+
+}
+
+footer{
+  width:100%;
+  background-color: var(--main--bg);
+  margin-top: auto;
+}
+
+footer p{
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  line-height: 5rem;
+  font-size: 1.4rem;
+
+}
+
+@media (max-width: 768px) {
+  .header_left{
+    height: auto;
+    margin: 5rem 0;
+  }
+  .header_right{
+    height: auto;
+    margin-top: 3rem;
+  }
+}
+
